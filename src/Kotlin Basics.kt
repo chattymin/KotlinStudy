@@ -1,0 +1,68 @@
+/*
+Practice Time: Basic Operations
+Solve the following using the operator methods in one line of code.
+
+If you start with 2 fish, and they breed twice, producing 71 offspring the first time, and 233 offspring the second time, and then 13 fish are swallowed by a hungry moray eel, how many fish do you have left? How many aquariums do you need if you can put 30 fish per aquarium?
+
+Hint: You can chain method calls.
+Hint: You can call the methods on numbers, and Kotlin will convert them to objects for you.
+Bonus question: What is special about all the numbers of fish?
+
+fun main(){
+    var result = 2.plus(71).plus(233).minus(13).div(30).plus(1)
+    println(result)
+    println(result/30)
+}
+*/
+
+/*
+Practice Time: Variables
+Create a String variable rainbowColor, set its color value, then change it.
+Create a variable blackColor whose value cannot be changed once assigned. Try changing it anyway.
+
+fun main(){
+    var rainbowColor: String = "Red"
+    rainbowColor = "blue"
+
+    val blackColor: String = "Black"
+    blackColor = "White!" // Error => Can't not set "val"
+}
+*/
+
+/*
+Practice Time: Nullability
+Try to set rainbowColor to null. Declare two variables, greenColor and blueColor. Use two different ways of setting them to null.
+
+fun main(){
+    var rainbowColor = "red"
+    rainbowColor = null // Error => Can't set null with out ?
+
+    var greenColor = null
+    var blueColor: String? = null
+
+}
+ */
+
+/*
+Practice Time: Nullability/Lists
+Create a list with two elements that are null; do it in two different ways.
+Next, create a list where the list is null.
+
+fun main(){
+    var arr1 = listOf(null, null)
+    var arr2: List<String?> = listOf(null, null)
+
+    var arr3: List<String?>? = null
+}
+ */
+
+/*
+Practice Time: Null Checks
+Create a nullable integer variable called nullTest, and set it to null. Use a null-check that increases the value by one if it's not null, otherwise returns 0, and prints the result.
+Hint: Use the Elvis operator.
+
+fun main(){
+    var nullTest: Int? = 3
+    println(nullTest?.inc()?:0)
+}
+ */
