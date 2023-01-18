@@ -66,3 +66,71 @@ fun main(){
     println(nullTest?.inc()?:0)
 }
  */
+
+/*
+Practice Time
+Create three String variables for trout, haddock, and snapper.
+Use a String template to print whether you do or don't like to eat these kinds of fish.
+
+fun main(){
+    var trout: String = "trout"
+    var haddock: String = "haddock"
+    var snappe: String = "snappe"
+    var now = trout
+
+    when(now){
+        trout-> println("I like $trout")
+        haddock-> println("I love $haddock")
+        snappe-> println("I hate $snappe")
+    }
+}
+ */
+
+/*
+Practice Time
+when statements in Kotlin are like case or switch statements in other languages.
+
+Create a when statement with three comparisons:
+
+If the length of the fishName is 0, print an error message.
+If the length is in the range of 3...12, print "Good fish name".
+If it's anything else, print "OK fish name".
+
+fun main() {
+    var fishName: String = "snake"
+
+    when(fishName.length){
+        0 -> println("Error")
+        in 3..12 -> println("Good Fish name")
+        else -> println("OK fish name")
+    }
+}
+ */
+
+/*
+Practice Time
+Looping over arrays and lists is a fundamental technique that has a lot of flexibility in Kotlin. Let's practice.
+
+Basic example
+Create an integer array of numbers called numbers, from 11 to 15.
+Create an empty mutable list for Strings.
+Write a for loop that loops over the array and adds the string representation of each number to the list.
+Challenge example
+How can you use a for loop to create (a list of) the numbers between 0 and 100 that are divisible by 7?
+
+fun main() {
+    var numbers: Array<Int> = Array(5){it + 11}
+
+    var mutableList = mutableListOf<String>()
+    for (number in numbers) mutableList.add(number)
+
+    var sevenList = mutableListOf<Int>()
+    for (number in 7..100 step 7) {
+        sevenList.add(number.toString())
+    }
+
+    println("First array: ${numbers.asList()}")
+    println("Second array: $mutableList")
+    println("Third array: $sevenList")
+}
+ */
