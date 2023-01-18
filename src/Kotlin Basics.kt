@@ -9,9 +9,9 @@ Hint: You can call the methods on numbers, and Kotlin will convert them to objec
 Bonus question: What is special about all the numbers of fish?
 
 fun main(){
-    var result = 2.plus(71).plus(233).minus(13).div(30).plus(1)
+    var result = 2.plus(71).plus(233).minus(13)
     println(result)
-    println(result/30)
+    println(result/30 + 1)
 }
 */
 
