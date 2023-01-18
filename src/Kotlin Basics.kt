@@ -122,9 +122,9 @@ fun main() {
     var numbers: Array<Int> = Array(5){it + 11}
 
     var mutableList = mutableListOf<String>()
-    for (number in numbers) mutableList.add(number)
+    for (number in numbers) mutableList.add(number.toString())
 
-    var sevenList = mutableListOf<Int>()
+    var sevenList = mutableListOf<String>()
     for (number in 7..100 step 7) {
         sevenList.add(number.toString())
     }
