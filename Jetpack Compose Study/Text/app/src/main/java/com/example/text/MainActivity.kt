@@ -57,7 +57,7 @@ fun Greeting(name: String) {
     //Text(fontWeight = FontWeight.Bold, text = "Hello $name!")
 
     // fontFamily에 FontFamily.Cursive를 설정해보자. => 폰트(글꼴)
-    //Text(fontFamily = FontFamily.Cursive, text = "Hello $name!")
+    Text(fontFamily = FontFamily.Cursive, text = "Hello $name!")
 
     // letterSpacing에 2.sp를 설정해보자. => 글자사이 간격
     //Text(letterSpacing = 2.sp, text = "Hello $name!")
@@ -70,11 +70,11 @@ fun Greeting(name: String) {
 
     // textAlign을 Center로 정렬 => 중앙정렬
     // 정렬이 되어있다는 것을 확인하기 위해 modifier설정
-    Text(
-        modifier =  Modifier.width(200.dp),
-        textAlign = TextAlign.Center,
-        text = "Hello $name!"
-    )
+//    Text(
+//        modifier =  Modifier.width(200.dp),
+//        textAlign = TextAlign.Center,
+//        text = "Hello $name!"
+//    )
 
 
 }
