@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1031297475167",
+    "project_id": "calcium-market-387023",
+    "storage_bucket": "calcium-market-387023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031297475167:android:43ad810467074075ee71ea",
+        "android_client_info": {
+          "package_name": "com.example.oauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031297475167-p9818vehrv5ke3kmaor2p8d93rekpjr7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oauth",
+            "certificate_hash": "d96210027e3f8e0fb91b84ad07f32a8f15dd2a66"
+          }
+        },
+        {
+          "client_id": "1031297475167-cqs161imc8ccme6litgj4gt2ob5bfupl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYQzjSckbZBOfhRf3-jDcdWRypAXLFMVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031297475167-cqs161imc8ccme6litgj4gt2ob5bfupl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
