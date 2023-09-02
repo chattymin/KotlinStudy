@@ -9,10 +9,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Checkbox
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,13 +21,34 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             SlotAPITheme {
-                // A surface container using the 'background' color from the theme
-                Checkbox()
-
+                var count = remember {
+                    mutableStateOf(0)
+                }
+                //Checkbox()
+                ButtonFun(count = count.value, onClick = {count.value++}){
+                    Text(text = "Click!")
+                }
             }
         }
     }
 }
+
+@Composable
+fun ButtonFun(
+    count: Int,
+    onClick: () -> Unit,
+    content: @Composable RowScope.() -> Unit
+){
+    Row(
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Button(onClick = { onClick() }) {
+            Text(text = count.toString())
+        }
+        content()
+    }
+}
+
 
 @Composable
 fun ChechboxWithSlot(
