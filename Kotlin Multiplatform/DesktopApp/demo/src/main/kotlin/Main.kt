@@ -1,25 +1,38 @@
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import com.example.kmmktor.Greeting
+import kotlinx.coroutines.launch
+
+@Composable
+fun GreetingView(text: String){
+    Text(text)
+}
 
 @Composable
 @Preview
 fun App() {
-    var text by remember { mutableStateOf("Hello, World!") }
-
     MaterialTheme {
-        Button(onClick = {
-            text = "Hello, Desktop!"
-        }) {
-            Text(text)
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colors.background
+        ) {
+            val scope = rememberCoroutineScope()
+            var text by remember { mutableStateOf("Loading") }
+            LaunchedEffect(true) {
+                scope.launch {
+                    text = try {
+                        Greeting().greeting()
+                    } catch (e: Exception) {
+                        e.localizedMessage ?: "error"
+                    }
+                }
+            }
+            GreetingView(text)
         }
     }
 }

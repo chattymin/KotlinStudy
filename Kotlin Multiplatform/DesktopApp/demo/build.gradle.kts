@@ -3,6 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
+    kotlin("multiplatform").version("1.8.0").apply(false)
 }
 
 group = "com.example"
@@ -31,5 +32,18 @@ compose.desktop {
             packageName = "demo"
             packageVersion = "1.0.0"
         }
+    }
+}
+
+kotlin {
+    val ktor_version = "2.3.5"
+    sourceSets {
+
+            dependencies {
+                implementation("io.ktor:ktor-client-core:$ktor_version")
+                implementation("io.ktor:ktor-client-json:$ktor_version")
+                implementation("io.ktor:ktor-client-serialization:$ktor_version")
+                implementation("io.ktor:ktor-client-cio:$ktor_version")
+            }
     }
 }
