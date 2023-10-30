@@ -40,6 +40,7 @@ kotlin {
     sourceSets {
 
             dependencies {
+                implementation("io.ktor:ktor-client-json:$2.1.5")
                 implementation("io.ktor:ktor-client-core:$ktor_version")
                 implementation("io.ktor:ktor-client-json:$ktor_version")
                 implementation("io.ktor:ktor-client-serialization:$ktor_version")
