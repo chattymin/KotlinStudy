@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
     kotlin("multiplatform").version("1.8.0").apply(false)
+    kotlin("plugin.serialization").version("1.8.0") // ktor로 serialization하려면 필수!!!!!!!!
 }
 
 group = "com.example"
@@ -36,7 +37,7 @@ compose.desktop {
 }
 
 kotlin {
-    val ktor_version = "2.3.5"
+    val ktor_version = "2.3.6"
     sourceSets {
 
             dependencies {
@@ -45,6 +46,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-json:$ktor_version")
                 implementation("io.ktor:ktor-client-serialization:$ktor_version")
                 implementation("io.ktor:ktor-client-cio:$ktor_version")
+                implementation("org.jetbrains.kotlin:kotlin-serialization:1.8.0")
             }
     }
 }
